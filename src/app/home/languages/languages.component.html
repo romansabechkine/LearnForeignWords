@@ -1,0 +1,16 @@
+<div class="home" *ngIf="showLanguages">
+    <h1>Choose language pair or create a new one! </h1>
+    <div class="grid">
+        <div class="grid__item"
+        *ngFor="let language of this.languages"
+        (click)="chooseLanguagePair(language)"
+        [class.grid__item__selected]="language.id === choosenlanguagePairId"
+        >
+            {{language.language1}} - {{language.language2}}
+         </div>
+    </div>
+</div>
+<div class="home" *ngIf="showAlertNoLanguage">
+    <h1 class="alert-no-categories"> You don't have any languages!</h1>
+</div>
+

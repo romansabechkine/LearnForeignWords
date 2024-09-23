@@ -1,0 +1,12 @@
+<header class="header">
+    <nav class="header__nav">
+          <div class="header__nav__div">
+            VocabApp - Learn new words!
+          </div>
+          <div class="flex space-x-4">
+            <app-logout *ngIf="getUserName"></app-logout>
+            <div class="header__nav__div__li" *ngIf="!getUserName" (click)="goToRegister()">Register</div>
+            <div class="header__nav__div__li" *ngIf="!getUserName" (click)="goToLogin()">Login</div>
+          </div>
+      </nav>
+</header>

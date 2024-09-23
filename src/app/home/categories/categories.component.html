@@ -1,0 +1,14 @@
+<div class="home" *ngIf="showCategories">
+    <h1>Choose language pair or create a new one! </h1>
+    <div class="grid">
+        <div class="grid__item" *ngFor="let category of this.categories"
+        [class.grid__item__selected]="category.id === choosenCategoryId"
+        (click)="chooseCategory(category)"
+        >
+            {{category.category}}
+         </div>
+    </div>
+</div>
+<div class="home" *ngIf="!showCategories">
+    <h1 class="alert-no-categories"> You don't have any categories yet for this languages!</h1>
+</div>

@@ -1,0 +1,369 @@
+{
+  "users": [
+    {
+      "id": "efz90",
+      "username": "roman",
+      "password": "1234"
+    },
+    {
+      "id": "cca8",
+      "username": "toto",
+      "password": "&&&&"
+    },
+    {
+      "id": "bea2",
+      "username": "roman",
+      "password": "1111"
+    }
+  ],
+  "languages": [
+    {
+      "id": "0",
+      "userId": "efz90",
+      "language1": "french",
+      "language2": "german"
+    },
+    {
+      "id": "1",
+      "userId": "efz90",
+      "language1": "french",
+      "language2": "english"
+    },
+    {
+      "id": "2",
+      "userId": "efz90",
+      "language1": "french",
+      "language2": "chineese"
+    },
+    {
+      "id": "0",
+      "userId": "1",
+      "language1": "french",
+      "language2": "indian"
+    }
+  ],
+  "categories": [
+    {
+      "id": "0",
+      "userId": "efz90",
+      "languagesId": "0",
+      "category": "nourriture"
+    },
+    {
+      "id": "1",
+      "userId": "efz90",
+      "languagesId": "0",
+      "category": "vêtements"
+    }
+  ],
+  "vocabularies": [
+    {
+      "id": "0",
+      "userId": "efz90",
+      "languagesId": "0",
+      "categoryId": "0",
+      "words": [
+        [
+          "une pomme",
+          "der Apfel (die Äpfel)"
+        ],
+        [
+          "un poisson",
+          "der Fisch (die Fische)"
+        ],
+        [
+          "un café",
+          "der Kaffee (-)"
+        ],
+        [
+          "un fromage",
+          "der Käse (-)"
+        ],
+        [
+          "une tarte",
+          "der Kuchen (=)"
+        ],
+        [
+          "un jus",
+          "der Saft (die Säfte)"
+        ],
+        [
+          "une salade",
+          "die Salat (die Salate)"
+        ],
+        [
+          "du thé",
+          "der Tee (-)"
+        ],
+        [
+          "une plaque",
+          "die Teller (=)"
+        ],
+        [
+          "du vin",
+          "der Wein (die Weine)"
+        ],
+        [
+          "de la bière",
+          "das Bier (-)"
+        ],
+        [
+          "du pain",
+          "das Brot (die Brote)"
+        ],
+        [
+          "une brioche",
+          "das Brötchen (=)"
+        ],
+        [
+          "un oeuf",
+          "das Ei (die Eier)"
+        ],
+        [
+          "une glace",
+          "das Glas (die Gläser)"
+        ],
+        [
+          "l'eau minérale",
+          "das Mineralwasser (-)"
+        ],
+        [
+          "une banane",
+          "die Banane (die Bananen)"
+        ],
+        [
+          "du beurre",
+          "die Butter (-)"
+        ],
+        [
+          "un concombre",
+          "die Gurke (die Gurken)"
+        ],
+        [
+          "une pomme de terre",
+          "die Kartoffel (die Kartoffeln)"
+        ],
+        [
+          "une confiture",
+          "die Marmelade (die Marmeladen)"
+        ],
+        [
+          "du lait",
+          "die Milch (-)"
+        ],
+        [
+          "une orange",
+          "die Orange (die Orangen)"
+        ],
+        [
+          "un soup",
+          "die Suppe (die Suppen)"
+        ],
+        [
+          "une tasse",
+          "die Tasse (die Tassen)"
+        ],
+        [
+          "une tomate",
+          "die Tomate (die Tomaten)"
+        ],
+        [
+          "une saucisse",
+          "die Wurst (die Würste)"
+        ],
+        [
+          "un citron",
+          "die Zitrone (die Zitronen)"
+        ]
+      ]
+    },
+    {
+      "id": "0",
+      "userId": "efz90",
+      "languagesId": "0",
+      "categoryId": "1",
+      "words": [
+        [
+          "un gant",
+          "der Handschuh (die Handschuhe)"
+        ],
+        [
+          "un manteau",
+          "der Mantel (die Mäntel)"
+        ],
+        [
+          "un pull",
+          "der Pullover (=)"
+        ],
+        [
+          "une jupe",
+          "der Rock (die Röcke)"
+        ],
+        [
+          "un foulard",
+          "der Schal (die Schals)"
+        ],
+        [
+          "une chaussure",
+          "der Schuh (die Schuhe)"
+        ],
+        [
+          "une chemise",
+          "das Hemd (die Hemden)"
+        ],
+        [
+          "une robe",
+          "das Kleid (die Kleider)"
+        ],
+        [
+          "un maillot",
+          "das T-Shirt (die T-shirts)"
+        ],
+        [
+          "une blouse",
+          "die Bluse (die Blusen)"
+        ],
+        [
+          "un pantalon",
+          "die Hose (die Hosen)"
+        ],
+        [
+          "un veste",
+          "die Jacke (die Jacken)"
+        ],
+        [
+          "des vêtements",
+          "die Kleidung (-)"
+        ],
+        [
+          "un chapeau",
+          "die Mütze (die Mützen)"
+        ],
+        [
+          "une chaussette",
+          "die Socke (die Socken)"
+        ],
+        [
+          "lourd",
+          "schwer"
+        ],
+        [
+          "léger",
+          "leicht"
+        ],
+        [
+          "long",
+          "lang"
+        ],
+        [
+          "court",
+          "kurz"
+        ],
+        [
+          "épais",
+          "dick"
+        ],
+        [
+          "mince",
+          "dünn"
+        ],
+        [
+          "à la mode",
+          "modisch"
+        ],
+        [
+          "pratique",
+          "praktish"
+        ],
+        [
+          "comfortable",
+          "bequem"
+        ],
+        [
+          "bleu",
+          "blau"
+        ],
+        [
+          "brun",
+          "braun"
+        ],
+        [
+          "jaun",
+          "gelb"
+        ],
+        [
+          "gris",
+          "grau"
+        ],
+        [
+          "vert",
+          "grün"
+        ],
+        [
+          "rouge",
+          "rot"
+        ],
+        [
+          "noir",
+          "scwarz"
+        ],
+        [
+          "blanc",
+          "weiß"
+        ],
+        [
+          "chaud",
+          "warm"
+        ],
+        [
+          "encore",
+          "wieder"
+        ],
+        [
+          "quelques",
+          "ein paar"
+        ],
+        [
+          "du temps",
+          "die Zeit"
+        ],
+        [
+          "saison",
+          "die Jahreszeit"
+        ],
+        [
+          "froid",
+          "kalt"
+        ],
+        [
+          "des shorts",
+          "die Shorts"
+        ],
+        [
+          "un hiver",
+          "der Winter"
+        ],
+        [
+          "un été",
+          "der Sommer"
+        ],
+        [
+          "une automne",
+          "der Herbst"
+        ],
+        [
+          "un printemp",
+          "der Frühling"
+        ],
+        [
+          "tiède, frais",
+          "kühl"
+        ],
+        [
+          "trop",
+          "zu"
+        ]
+      ]
+    }
+  ]
+}

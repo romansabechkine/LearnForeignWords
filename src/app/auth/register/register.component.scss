@@ -1,0 +1,23 @@
+
+form {
+    @apply flex flex-col justify-center items-center mt-40
+}
+.input-registration{
+    @apply border-none py-2 bg-stone-100 pl-3 pr-7 mr-4 rounded-md mt-3
+}
+
+.register-button{
+    @apply flex p-2 bg-green-400 rounded-md px-8 mt-4
+}
+
+.register-button-disabled{
+    @apply flex p-2 bg-red-400 rounded-md px-6 mt-4
+}
+
+.no-match{
+    @apply text-red-700 font-bold text-lg mt-4
+}
+
+.register_error_text{
+    @apply text-red-500 text-sm mt-4;
+}

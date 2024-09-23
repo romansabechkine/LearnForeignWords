@@ -1,0 +1,15 @@
+.header{
+    @apply fixed inset-x-0 z-10 top-0 p-5 bg-stone-50;
+
+    &__nav{
+        @apply flex justify-between items-center;
+
+        &__div{
+            @apply text-red-400 font-bold text-xl;
+
+            &__li{
+                @apply  text-slate-500 py-2 px-4 rounded hover:underline decoration-2 underline-offset-8 ;
+            }
+        }
+    }
+}

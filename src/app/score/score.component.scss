@@ -1,0 +1,11 @@
+.home{
+    @apply px-4 py-4
+}
+
+.correct-answer{
+    @apply bg-green-200
+}
+
+.falsy-answer{
+    @apply  bg-red-200
+}

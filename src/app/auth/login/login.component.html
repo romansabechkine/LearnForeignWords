@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+    <input formControlName="username" class="input-login"
+           type="text" required="true" placeholder="Enter username: ">
+    
+    <input formControlName="password" class="input-login"
+           type="password" required="true" placeholder="Enter password: " >
+
+    <button class="login-button"
+        [disabled]="!loginForm.value.username || !loginForm.value.password!"
+        [class.login-button]="loginForm.value.username && loginForm.value.password"
+        [class.login-button-disabled]="!loginForm.value.username || !loginForm.value.password">
+    Login</button>
+
+    <div class="empty-entries" [hidden]="loginForm.value.username && loginForm.value.password">
+            Empty entries</div>
+</form>

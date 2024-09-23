@@ -1,0 +1,19 @@
+<div class="flex-grow sm:ml-64 mt-24 mb-10">
+    <app-sidebar *ngIf="username"
+    (getLanguagesEvent)="getLanguages($event)"
+    [vocabularyId]="vocabularyId"
+    >
+    </app-sidebar>
+    <app-languages *ngIf="username" [languages]="languages"
+    (chooseLanguagePairEvent)="acceptLanguageAndGetCategories($event)"
+    >
+    </app-languages>
+    <app-categories *ngIf="languageWasChoosen" [categories]="categories"
+    (chooseCategoryEvent)="acceptCategoryAndGetVocabulary($event)"
+    >
+
+    </app-categories>
+    <app-vocabulary *ngIf="languageWasChoosen && categoryWasChoosen" [vocabulary]="vocabulary">
+
+    </app-vocabulary>
+</div>

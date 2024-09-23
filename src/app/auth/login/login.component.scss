@@ -1,0 +1,15 @@
+form{
+    @apply flex flex-col justify-center items-center mt-40
+}
+.input-login{
+    @apply border-none py-2 bg-stone-100 pl-3 pr-7 mr-4 rounded-md mt-3
+}
+.login-button{
+    @apply flex p-2 bg-green-400 rounded-md px-6 mt-4
+}
+.login-button-disabled{
+    @apply flex p-2 bg-red-400 rounded-md px-6 mt-4
+}
+.empty-entries{
+    @apply text-red-700 font-bold text-lg mt-8
+}

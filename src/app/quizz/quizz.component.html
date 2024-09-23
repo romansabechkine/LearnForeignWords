@@ -1,0 +1,36 @@
+<div class="flex-grow sm:ml-64 mt-24 mb-10">
+    <app-sidebar-for-quizz>
+
+    </app-sidebar-for-quizz>
+    <div *ngIf="!quizzIsFinished" class="home">
+        <div class="quizz-block">
+            <div class="question">{{quizzElement.question}}</div>
+            <div class="grid">
+                <div class="item" *ngFor="let answer of quizzElement.answers"
+                (click)="nextQuizzElement(quizzElement.id, quizzElement.question, answer, quizzElement.correctAnswer)">{{answer}}</div>
+            </div>
+        </div>
+        <div class="flex flex-col w-full">
+            <!-- Progress bar -->
+            <div class="relative w-full">
+              <div class="progress bg-white h-4 relative"></div>
+          
+              <!-- Segment dividers -->
+              <div class="absolute top-0 left-0 w-full flex justify-evenly -mt-1">
+                <div *ngFor="let q of quizzData; let k = index" class="segment bg-gray-400 w-5 h-2 shadow-md"
+                    [class.bin__passed]="styleBin(k)"> 
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div *ngIf="quizzIsFinished" class="home">
+        <app-score [userQuizzAnswers]="userQuizzAnswers">
+
+        </app-score>
+    </div>
+   
+</div>
+
+
+

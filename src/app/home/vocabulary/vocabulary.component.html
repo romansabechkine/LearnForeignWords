@@ -1,0 +1,22 @@
+<div class="home" *ngIf="showVocabulary">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th class="px-6 py-3">{{language1}}</th>
+                    <th class="px-6 py-3">{{language2}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let word of uniqueVoc.words" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-200">
+                    <td class="px-6 py-4">{{ word[0] }}</td> <!-- French word -->
+                    <td class="px-6 py-4">{{ word[1] }}</td> <!-- German translation -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="home" *ngIf="showAlertNoVocabulary">
+    <h1 class="alert-no-categories"> You don't have any languages!</h1>
+</div>
+

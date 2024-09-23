@@ -1,0 +1,19 @@
+<form [formGroup]="registerForm" (ngSubmit)="addUser()">
+    
+    <input formControlName="username" class="input-registration"
+           type="text" required="true" placeholder="Enter username: ">
+    
+    <input formControlName="password" class="input-registration"
+           type="password" required="true"  placeholder="Enter password: " >
+   
+    <input formControlName="confirmPassword" class="input-registration"
+           type="password" required="true"  placeholder="Confirm password: ">
+
+    <button class="register-button" [class.register-button-disabled]="registerForm.invalid">
+    Register</button>
+
+    <p *ngIf="registerForm.invalid && (registerForm.touched || registerForm.dirty)" class="register_error_text">
+           {{ getErrorLabel }}
+         </p>
+
+</form>

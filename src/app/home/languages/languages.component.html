@@ -1,16 +1,32 @@
 <div class="home" *ngIf="showLanguages">
-    <h1>Choose language pair or create a new one! </h1>
-    <div class="grid">
-        <div class="grid__item"
-        *ngFor="let language of this.languages"
-        (click)="chooseLanguagePair(language)"
-        [class.grid__item__selected]="language.id === choosenlanguagePairId"
-        >
-            {{language.language1}} - {{language.language2}}
-         </div>
+  <form class="bg-white p-6 rounded-lg shadow-md" [formGroup]="languagesForm" (ngSubmit)="addLanguage()">
+   <h1>Add Languages</h1>
+    <div class="mb-4">
+      <input type="text" formControlName="language1" placeholder="Language 1 Name"
+             class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-action-color"
+             required/>
     </div>
+    <div class="mb-4">
+      <input type="text" formControlName="language2" placeholder="Language 2 Name"
+             class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-action-color"
+             required/>
+    </div>
+    <button type="submit" class="bg-action-color text-white py-2 px-4 rounded-lg hover:bg-orange-600">Add Languages
+    </button>
+  </form>
+
+  <h1>Choose the language</h1>
+  <div class="grid">
+    <div class="grid__item"
+         *ngFor="let language of this.languages"
+         (click)="chooseLanguagePair(language)"
+         [class.grid__item__selected]="language.id === choosenlanguagePairId"
+    >
+      {{ language.language1 }} - {{ language.language2 }}
+    </div>
+  </div>
 </div>
 <div class="home" *ngIf="showAlertNoLanguage">
-    <h1 class="alert-no-categories"> You don't have any languages!</h1>
+  <h1 class="alert-no-categories"> You don't have any languages!</h1>
 </div>
 

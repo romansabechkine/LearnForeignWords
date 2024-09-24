@@ -1,14 +1,25 @@
+<app-languages (selectedLanguageIdEvent)="onLanguageSelected($event)"></app-languages>
+
+<form class="bg-white p-6 rounded-lg shadow-md" [formGroup]="categoriesForm" (ngSubmit)="addCategory()">
+  <div class="mb-4">
+    <input type="text" formControlName="category" placeholder="Category Name" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-action-color" required />
+  </div>
+  <button type="submit" class="bg-action-color text-white py-2 px-4 rounded-lg hover:bg-orange-600">Add Category</button>
+</form>
+
+<p>Selected Language ID: {{ selectedLanguageId }}</p>
+
 <div class="home" *ngIf="showCategories">
-    <h1>Choose language pair or create a new one! </h1>
-    <div class="grid">
-        <div class="grid__item" *ngFor="let category of this.categories"
-        [class.grid__item__selected]="category.id === choosenCategoryId"
-        (click)="chooseCategory(category)"
-        >
-            {{category.category}}
-         </div>
+  <h1>Choose your category</h1>
+  <div class="grid">
+    <div class="grid__item"
+         *ngFor="let category of this.categories"
+         (click)="chooseCategory(category)"
+         [class.grid__item__selected]="category.id === choosenCategoryId">
+      {{category.category}}
     </div>
+  </div>
 </div>
 <div class="home" *ngIf="!showCategories">
-    <h1 class="alert-no-categories"> You don't have any categories yet for this languages!</h1>
+  <h1 class="alert-no-categories">You don't have any categories yet for this language!</h1>
 </div>

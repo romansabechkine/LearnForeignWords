@@ -105,6 +105,10 @@ export class QuizzComponent implements OnInit{
     return id <= this.iterI
   }
 
+  finishQuizz(){
+    return this.quizzIsFinished = true
+  }
+
 
 
 }

@@ -54,6 +54,18 @@
       "userId": "efz90",
       "languagesId": "0",
       "category": "vêtements"
+    },
+    {
+      "id": "2",
+      "userId": "efz90",
+      "languagesId": "1",
+      "category": "nourriture"
+    },
+    {
+      "id": "3",
+      "userId": "efz90",
+      "languagesId": "1",
+      "category": "vêtements"
     }
   ],
   "vocabularies": [
@@ -362,6 +374,38 @@
         [
           "trop",
           "zu"
+        ]
+      ]
+    },
+    {
+      "id": "053a",
+      "userId": "efz90",
+      "languagesId": "1",
+      "categoryId": "2",
+      "words": [
+        [
+          "pomme",
+          "apple"
+        ],
+        [
+          "ss",
+          "s"
+        ],
+        [
+          "ddd",
+          "ddd"
+        ],
+        [
+          "ddddddddddddd",
+          "rr"
+        ],
+        [
+          "kiwi",
+          "kiwien"
+        ],
+        [
+          "orange",
+          "orange-en"
         ]
       ]
     }

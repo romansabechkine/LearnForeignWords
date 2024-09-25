@@ -26,7 +26,7 @@ export interface Category {
 }
   
 export interface Vocabulary {
-    id: string
+    id?: string
     userId: string
     languagesId: string
     categoryId: string

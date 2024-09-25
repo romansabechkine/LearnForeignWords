@@ -18,6 +18,7 @@ import { VocabularyComponent } from './home/vocabulary/vocabulary.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { SidebarForQuizzComponent } from './quizz/sidebar-for-quizz/sidebar-for-quizz.component';
 import { ScoreComponent } from './score/score.component';
+import { WordsComponent } from './home/words/words.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ScoreComponent } from './score/score.component';
     QuizzComponent,
     SidebarForQuizzComponent,
     ScoreComponent,
+    WordsComponent,
   ],
   imports: [
     BrowserModule,

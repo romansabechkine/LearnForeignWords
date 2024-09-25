@@ -19,4 +19,8 @@ export class LanguageService {
     });
   }
 
+  getLanguages(userId: string): Observable<Language[]> {
+    return this.http.get<Language[]>(`http://localhost:3000/languages/${userId}`);
+  }
+
 }

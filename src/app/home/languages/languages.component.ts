@@ -21,8 +21,16 @@ export class LanguagesComponent implements OnInit {
     });
   }
 
-  addLanguage() {
+  loadLanguages() {
+    const userId = localStorage.getItem('userid')!;
+    this.languageService.getLanguages(userId).subscribe(
+      (response) => {
+        console.log('Languages loaded successfully', response);
+        this.languages = response;
+      });
+  }
 
+  addLanguage() {
     const userId = localStorage.getItem('userid')!;
     const languageName1 = this.languagesForm.value.language1;
     const languageName2 = this.languagesForm.value.language2;

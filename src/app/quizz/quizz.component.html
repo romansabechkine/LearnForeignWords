@@ -14,22 +14,23 @@
             <!-- Progress bar -->
             <div class="relative w-full">
               <div class="progress bg-white h-4 relative"></div>
-          
+
               <!-- Segment dividers -->
               <div class="absolute top-0 left-0 w-full flex justify-evenly -mt-1">
                 <div *ngFor="let q of quizzData; let k = index" class="segment bg-gray-400 w-5 h-2 shadow-md"
-                    [class.bin__passed]="styleBin(k)"> 
+                    [class.bin__passed]="styleBin(k)">
                 </div>
               </div>
             </div>
           </div>
+      <button class="btn-submit" (click)="finishQuizz()">Finish Quizz</button>
     </div>
     <div *ngIf="quizzIsFinished" class="home">
         <app-score [userQuizzAnswers]="userQuizzAnswers">
 
         </app-score>
     </div>
-   
+
 </div>
 
 

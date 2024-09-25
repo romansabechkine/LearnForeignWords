@@ -45,17 +45,17 @@ export class QuizzComponent implements OnInit{
     console.log(this.quizzData)
     this.quizzElement = this.quizzData[0]
   }
-  
+
   ngOnChanges(){
     this.quizzElement
   }
   /* Randomize array in-place using Durstenfeld shuffle algorithm */
   shuffleArray(array:any[]) {
     for (var i = array.length - 1; i >= 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
     }
   }
 
@@ -76,7 +76,7 @@ export class QuizzComponent implements OnInit{
   }
 
   iterI: number = 0
- 
+
   nextQuizzElement(i: number, question: string, answer: string, correctAnswer: string){
     console.log(i)
     console.log(this.quizzData.length-1)
@@ -91,18 +91,22 @@ export class QuizzComponent implements OnInit{
       this.iterI += 1
       this.quizzElement = this.quizzData[i+1]
       console.log(this.quizzElement)
-      
+
       if(i === this.quizzData.length-1){
         this.quizzIsFinished = true
       }
     }
     console.log(this.quizzIsFinished)
     console.log(this.userQuizzAnswers)
-    
+
   }
 
   styleBin(id:number):boolean{
     return id <= this.iterI
+  }
+
+  finishQuizz(){
+    return this.quizzIsFinished = true
   }
 
 

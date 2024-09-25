@@ -1,11 +1,11 @@
 <aside id="logo-sidebar"
        class="fixed top-20 left-0 z-0 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
        aria-label="Sidebar">
-  <div class="h-full px-3 py-4 overflow-y-auto bg-stone-50 dark:bg-gray-800">
+  <div class="h-full px-3 py-4 overflow-y-auto bg-stone-50">
     <ul class="space-y-2 font-medium">
       <li>
         <div (click)="getLanguages()"
-             class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group">
           <svg width="20" height="20" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                viewBox="0 0 120 120">
             <defs>
@@ -22,7 +22,7 @@
       </li>
       <li>
         <div *ngIf="vocabularyId" (click)="goToQuizz()"
-             class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
           <svg fill="#000000" height="20" width="20" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                viewBox="0 0 294.023 294.023" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

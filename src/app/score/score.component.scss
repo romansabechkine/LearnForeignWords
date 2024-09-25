@@ -9,3 +9,23 @@
 .falsy-answer{
     @apply  bg-red-200
 }
+
+.score-banner {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.bg-green-300 {
+  background-color: #4CAF50;
+}
+
+.bg-yellow-300 {
+  background-color: #FFEB3B;
+}
+.bg-red-300 {
+  background-color: #df5a52;
+}

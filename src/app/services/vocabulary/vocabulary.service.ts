@@ -73,4 +73,8 @@ export class VocabularyService {
       updatedVocabulary
     );
   }
+
+  addVocabulary(newVocabulary: Vocabulary): Observable<Vocabulary> {
+    return this.http.post<Vocabulary>(`http://localhost:3000/vocabularies`, newVocabulary);
+  }
 }

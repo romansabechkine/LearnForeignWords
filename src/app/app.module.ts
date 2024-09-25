@@ -19,6 +19,7 @@ import { QuizzComponent } from './quizz/quizz.component';
 import { SidebarForQuizzComponent } from './quizz/sidebar-for-quizz/sidebar-for-quizz.component';
 import { ScoreComponent } from './score/score.component';
 import { WordsComponent } from './home/words/words.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { WordsComponent } from './home/words/words.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

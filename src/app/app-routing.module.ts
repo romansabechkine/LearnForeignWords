@@ -5,7 +5,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
 import { VocabularyComponent } from './home/vocabulary/vocabulary.component';
 import { QuizzComponent } from './quizz/quizz.component';
-
+import {ScoreComponent} from "./score/score.component";
 
 
 const routes: Routes = [
@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'vocabulary', component: VocabularyComponent},
   {path: 'quizz', component: QuizzComponent},
-  
+  {path: 'score', component: ScoreComponent}
+
 ];
 
 @NgModule({

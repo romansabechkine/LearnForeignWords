@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VocabularyService } from '../services/vocabulary/vocabulary.service';
 import { Quizz, UserAnswer, Vocabulary } from '../services/types';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quizz',
@@ -24,7 +25,12 @@ export class QuizzComponent implements OnInit{
 
   quizzIsFinished: boolean = false
 
-  constructor(private vocabularyService: VocabularyService){}
+  score: number = 0
+
+  constructor(
+    private vocabularyService: VocabularyService,
+    private router: Router
+  ){}
 
 
   ngOnInit(){
@@ -91,6 +97,11 @@ export class QuizzComponent implements OnInit{
       this.iterI += 1
       this.quizzElement = this.quizzData[i+1]
       console.log(this.quizzElement)
+
+      //calculate score
+      if(userAnswer.userAnswer === userAnswer.correctAnswer){
+        this.score += 1
+      }
       
       if(i === this.quizzData.length-1){
         this.quizzIsFinished = true
@@ -109,6 +120,8 @@ export class QuizzComponent implements OnInit{
     return this.quizzIsFinished = true
   }
 
-
+  goToScore(){
+    return this.router.navigate(["result", this.score])
+  }
 
 }

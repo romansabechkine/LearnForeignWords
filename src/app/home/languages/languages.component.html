@@ -1,5 +1,7 @@
 <div class="home" *ngIf="showLanguages">
-    <h1>Choose language pair or create a new one! </h1>
+    <h1>Choose language pair or <span (click)="createNewLanguagePair()"
+        class="underline underline-offset-4 font-bold">
+        create</span> a new one! </h1>
     <div class="grid">
         <div class="grid__item"
         *ngFor="let language of this.languages"
@@ -8,9 +10,11 @@
         >
             {{language.language1}} - {{language.language2}}
          </div>
+         <!--<div class="grid__item border-none bg-slate-50 text-2xl" (click)="addNewLanguagePair()"> + </div>-->
     </div>
 </div>
 <div class="home" *ngIf="showAlertNoLanguage">
     <h1 class="alert-no-categories"> You don't have any languages!</h1>
 </div>
+
 

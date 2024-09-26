@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Language } from '../../services/types';
+import { AddLanguagePair, Language } from '../../services/types';
 
 @Component({
   selector: 'app-languages',
@@ -10,6 +10,7 @@ export class LanguagesComponent {
   
   @Input() languages!: Language[] | undefined
   @Output() chooseLanguagePairEvent = new EventEmitter<Language>()
+  @Output() addNewLanguagePairEvent = new EventEmitter<boolean>()
 
   // this variable is used to show languages if the user have any
   showLanguages: boolean = false
@@ -17,6 +18,7 @@ export class LanguagesComponent {
 
   // this variable is used to set style
   choosenlanguagePairId: string = ''
+
   
   chooseLanguagePair(languagePair:Language){
     this.choosenlanguagePairId = languagePair.id
@@ -35,4 +37,10 @@ export class LanguagesComponent {
       }
     } 
   }
+  createNewLanguagePair(){
+    return this.addNewLanguagePairEvent.emit(true)
+    //return this.showModal = true
+  }
+
+ 
 }

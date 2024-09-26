@@ -7,12 +7,13 @@ import { VocabularyComponent } from './home/vocabulary/vocabulary.component';
 import { QuizzComponent } from './quizz/quizz.component';
 
 
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'vocabulary', component: VocabularyComponent},
-  {path: 'quizz', component: QuizzComponent}
+  {path: 'quizz', component: QuizzComponent},
   
 ];
 

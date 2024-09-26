@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { UserAnswer } from '../services/types';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-score',
@@ -13,4 +14,4 @@ export class ScoreComponent {
   language1: string | null = localStorage.getItem("language1")
   language2: string | null = localStorage.getItem("language2")
   
-  }
+}

@@ -1,5 +1,6 @@
 <div class="home" *ngIf="showCategories">
-    <h1>Choose language pair or create a new one! </h1>
+    <h1>Choose category or <span class="underline underline-offset-4 font-bold"
+        (click)="createNewCategory()">create</span> a new one!</h1>
     <div class="grid">
         <div class="grid__item" *ngFor="let category of this.categories"
         [class.grid__item__selected]="category.id === choosenCategoryId"
@@ -9,6 +10,8 @@
          </div>
     </div>
 </div>
-<div class="home" *ngIf="!showCategories">
-    <h1 class="alert-no-categories"> You don't have any categories yet for this languages!</h1>
+<div class="home" *ngIf="!showCategories" >
+    <h1><span class="underline underline-offset-4 font-bold"
+        (click)="createNewCategory()">Create</span> a new category!</h1>
+    <div class="alert-no-categories">You don't have any categories for theese languages!</div>
 </div>

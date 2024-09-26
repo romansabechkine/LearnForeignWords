@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Category, Language, Vocabulary } from '../types';
+import { AddCategory, AddLanguagePair, Category, Language, Vocabulary } from '../types';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -42,5 +42,13 @@ export class VocabularyService {
      })
     return res
    
+  }
+
+  addLanguage(languagePair: AddLanguagePair):Observable<Language>{
+    return this.http.post<Language>('http://localhost:3000/languages', JSON.stringify(languagePair))
+  }
+
+  addCategory(category: AddCategory):Observable<Category>{
+    return this.http.post<Category>('http://localhost:3000/categories', JSON.stringify(category))
   }
 }

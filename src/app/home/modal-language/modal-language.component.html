@@ -1,0 +1,17 @@
+<!-- Modal Overlay -->
+<section class="absolute inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+    <section class="relative bg-white rounded-xl p-6 w-2/4">
+       <div class="absolute top-4 right-4 text-xl hover:text-red-500" (click)="closeModal()">X</div>
+       
+       <form [formGroup]="languageForm" (ngSubmit)="onSubmit()"
+       class="flex flex-col justify-center items-center">
+            <input formControlName="language1" type="text" required="true" placeholder="Language 1: "
+            class="border-2 p-2 border-red-200 rounded-xl mb-2 mt-4">
+            <input formControlName="language2" type="text" required="true" placeholder="Language 2: "
+            class="border-2 p-2 border-red-200 rounded-xl m-2">
+            <button class="flex p-2 bg-red-400 rounded-xl px-3 m-2">
+            Submit</button>
+        </form>
+
+    </section>
+</section>

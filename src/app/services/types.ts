@@ -46,3 +46,15 @@ export interface UserAnswer {
     userAnswer: string,
     correctAnswer: string
 }
+
+export interface AddLanguagePair {
+    userId : string
+    language1 : string
+    language2 : string
+}
+
+export interface AddCategory {
+    userId : string
+    languagesId : string
+    category: string
+}

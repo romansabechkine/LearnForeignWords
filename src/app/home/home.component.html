@@ -6,10 +6,12 @@
     </app-sidebar>
     <app-languages *ngIf="username" [languages]="languages"
     (chooseLanguagePairEvent)="acceptLanguageAndGetCategories($event)"
+    (addNewLanguagePairEvent)="showModalAddLanguage($event)"
     >
     </app-languages>
     <app-categories *ngIf="languageWasChoosen" [categories]="categories"
     (chooseCategoryEvent)="acceptCategoryAndGetVocabulary($event)"
+    (addNewCategoryEvent)="acceptNewCategory($event)"
     >
 
     </app-categories>
@@ -17,3 +19,15 @@
 
     </app-vocabulary>
 </div>
+
+<app-modal-language *ngIf="showLanguageModal"
+    (addedlanguageEvent)="acceptAddedLanguage($event)"
+    (closeModalEvent)="acceptCloseModalEvent($event)"
+></app-modal-language>
+
+<app-modal-category *ngIf="showCategoryModal"
+    (addedCategoryEvent)="acceptAddedCategory($event)"
+    (closeModalCategoryEvent)="acceptCloseModalCategoryEvent($event)"
+    >
+</app-modal-category>
+

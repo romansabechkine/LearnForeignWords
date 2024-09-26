@@ -21,6 +21,12 @@ export class HomeComponent {
 
   vocabularyId!: string
 
+  // modal for add pair of languages
+  showLanguageModal: boolean = false
+
+  // modal for add pair of languages
+  showCategoryModal: boolean = false
+
 
   //we will show the categories if user choosed the language
   languageWasChoosen: boolean = false
@@ -96,6 +102,37 @@ export class HomeComponent {
         console.log("voc in home")
         console.log(this.vocabulary)
       }
+  }
+  // Modal for language
+  acceptCloseModalEvent(event:boolean){
+    return this.showLanguageModal = event
+  }
+  showModalAddLanguage(event:boolean){
+    return this.showLanguageModal = event
+  }
+  acceptAddedLanguage(event:Language){
+    if(event){
+      const newLanguage = {...event}
+      this.languages.push(newLanguage)
+    }
+    this.showLanguageModal = false
+  }
+
+  // Modal for category
+  acceptCloseModalCategoryEvent(event:boolean){
+    return this.showCategoryModal = event
+  }
+  acceptNewCategory(event:boolean){
+    return this.showCategoryModal = event
+  }
+  acceptAddedCategory(event:Category){
+    if(event){
+      const newCategory = {...event}
+      this.categories!.push(newCategory)
+      console.log("New category")
+      console.log(newCategory)
+    }
+    this.showCategoryModal = false
   }
 }
 

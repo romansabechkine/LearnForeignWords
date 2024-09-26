@@ -18,6 +18,9 @@ import { VocabularyComponent } from './home/vocabulary/vocabulary.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { SidebarForQuizzComponent } from './quizz/sidebar-for-quizz/sidebar-for-quizz.component';
 import { ScoreComponent } from './score/score.component';
+import { ModalLanguageComponent } from './home/modal-language/modal-language.component';
+import { ModalCategoryComponent } from './modal-category/modal-category.component';
+
 
 
 @NgModule({
@@ -36,6 +39,8 @@ import { ScoreComponent } from './score/score.component';
     QuizzComponent,
     SidebarForQuizzComponent,
     ScoreComponent,
+    ModalLanguageComponent,
+    ModalCategoryComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@
             VocabApp - Learn new words!
           </div>
           <div class="flex space-x-4">
-            <span *ngIf="getUserName">Welcome, {{ getUserName }}!</span>
+            <div class="header__nav__div__welcome" *ngIf="getUserName">Welcome, {{ getUserName }}!</div>
             <app-logout *ngIf="getUserName"></app-logout>
             <div class="header__nav__div__li" *ngIf="!getUserName" (click)="goToRegister()">Register</div>
             <div class="header__nav__div__li" *ngIf="!getUserName" (click)="goToLogin()">Login</div>

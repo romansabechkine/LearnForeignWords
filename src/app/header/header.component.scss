@@ -10,6 +10,10 @@
             &__li{
                 @apply  text-slate-500 py-2 px-4 rounded hover:underline decoration-2 underline-offset-8 ;
             }
+
+            &__welcome{
+                @apply text-slate-500 py-2 px-4  font-bold;
+            }
         }
     }
 }

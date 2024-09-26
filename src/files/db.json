@@ -42,6 +42,18 @@
       "userId": "efz90",
       "languagesId": "0",
       "category": "vêtements"
+    },
+    {
+      "id": "2",
+      "userId": "efz90",
+      "languagesId": "1",
+      "category": "nourriture"
+    },
+    {
+      "id": "3",
+      "userId": "efz90",
+      "languagesId": "1",
+      "category": "vêtements"
     }
   ],
   "vocabularies": [
@@ -350,6 +362,50 @@
         [
           "trop",
           "zu"
+        ]
+      ]
+    },
+    {
+      "id": "053a",
+      "userId": "efz90",
+      "languagesId": "1",
+      "categoryId": "2",
+      "words": [
+        [
+          "pomme",
+          "apple"
+        ],
+        [
+          "kiwi",
+          "kiwien"
+        ],
+        [
+          "banane",
+          "banana"
+        ],
+        [
+          "orange",
+          "orange"
+        ]
+      ]
+    },
+    {
+      "id": "_p20wne3kf",
+      "userId": "efz90",
+      "languagesId": "1",
+      "categoryId": "3",
+      "words": [
+        [
+          "jeans",
+          "jeans"
+        ],
+        [
+          "hoodie",
+          "hoodie"
+        ],
+        [
+          "t-shirt",
+          "t-shirt"
         ]
       ]
     }

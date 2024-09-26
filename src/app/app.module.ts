@@ -20,7 +20,8 @@ import { SidebarForQuizzComponent } from './quizz/sidebar-for-quizz/sidebar-for-
 import { ScoreComponent } from './score/score.component';
 import { ModalLanguageComponent } from './home/modal-language/modal-language.component';
 import { ModalCategoryComponent } from './modal-category/modal-category.component';
-
+import { WordsComponent } from './home/words/words.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ModalCategoryComponent } from './modal-category/modal-category.componen
     ScoreComponent,
     ModalLanguageComponent,
     ModalCategoryComponent,
+    WordsComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { ModalCategoryComponent } from './modal-category/modal-category.componen
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

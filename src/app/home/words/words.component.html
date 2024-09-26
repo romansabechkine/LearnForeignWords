@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit()" style="display: flex; flex-wrap: wrap; gap: 10px">
+  <div style="flex: 1">
+    <label for="originalWord">Original Word:</label>
+    <input
+      class="input"
+      type="text"
+      id="originalWord"
+      name="originalWord"
+      [(ngModel)]="originalWord"
+      required
+    />
+  </div>
+  <div>
+    <label for="targetWord">Target Word:</label>
+    <input
+      class="input"
+      type="text"
+      id="targetWord"
+      name="targetWord"
+      [(ngModel)]="targetWord"
+      required
+    />
+  </div>
+  <button class="button" type="submit">Submit</button>
+</form>

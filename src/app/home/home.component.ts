@@ -85,13 +85,15 @@ export class HomeComponent {
       if (event) {
         this.categoryWasChoosen = true
         localStorage.setItem("category", event.category)
+        localStorage.setItem("categoryId", event.id)
         const res = this.vocabularyService.getVocabulary(event.userId, event.languagesId, event.id)
         res.subscribe(
           (response:Vocabulary[] | undefined):void => {
             //console.log(`Response in acceptLanguageAndGetCategories: ${response}`)
             this.vocabulary = response
             if (this.vocabulary?.length !== 0 || this.vocabulary !== undefined){
-              this.vocabularyId = this.vocabulary![0].id
+              this.vocabularyId = this.vocabulary?.[0]?.id ?? '';
+              localStorage.setItem('vocabularyId', this.vocabularyId);
             } 
           },
           (error) => {

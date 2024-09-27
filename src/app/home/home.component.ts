@@ -13,7 +13,7 @@ export class HomeComponent {
   userid: string | null = localStorage.getItem("userid")
   username: string | null = localStorage.getItem("username")
 
-  languages! : Language[]
+  languages : Language[] = []
 
   categories! : Category[] | undefined
 
@@ -116,6 +116,8 @@ export class HomeComponent {
     if(event){
       const newLanguage = {...event}
       this.languages.push(newLanguage)
+      console.log("New language")
+      console.log(newLanguage)
     }
     this.showLanguageModal = false
   }

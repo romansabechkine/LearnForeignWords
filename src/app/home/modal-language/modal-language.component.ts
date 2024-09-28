@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
 import { AddLanguagePair, Language } from '../../services/types';
 import { VocabularyService } from '../../services/vocabulary/vocabulary.service';
 
@@ -17,12 +17,19 @@ export class ModalLanguageComponent {
   languagePair!: AddLanguagePair
   addedLanguagePair!: Language
 
-  languageForm = new FormGroup({
-    language1: new FormControl(''),
-    language2: new FormControl(''),
-  })
 
+    languageForm = new FormGroup({
+      language1: new FormControl(''),
+      language2: new FormControl(''),
+    }, { validators: [this.checkLength] })
+  
+  
   constructor(private vocabularyService: VocabularyService){}
+
+  ngDoCheck(){
+    console.log("Check in language-modal component")
+    this.languageForm
+  }
 
   closeModal(){
     return this.closeModalEvent.emit(false)
@@ -50,5 +57,19 @@ export class ModalLanguageComponent {
     //this.closeModal()
     //return this.addedlanguageEvent.emit(this.addedLanguagePair)
   }
+
+  private checkLength(control: AbstractControl){
+    const language1 = control.get('language1');
+    const language2 = control.get('language2');
+    const error = language1?.value.length < 2 || language2?.value.length < 2
+    return error ? { errorLength: true } : null;
+  }
+
+  get getErrorLabel() {
+    if (this.languageForm.errors?.['errorLength']) return 'The word should have more than 1 letter';
+    return 'Something went wrong';
+  }
+
+
 }
 

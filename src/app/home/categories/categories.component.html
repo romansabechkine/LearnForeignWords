@@ -6,8 +6,8 @@
         [class.grid__item__selected]="category.id === choosenCategoryId"
         (click)="chooseCategory(category)"
         >
-            {{category.category}}
-         </div>
+            <span class="inline-block">{{category.category}}</span>
+        </div>
     </div>
 </div>
 <div class="home" *ngIf="!showCategories" >

@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { VocabularyService } from '../services/vocabulary/vocabulary.service';
-import { AddCategory, Category } from '../services/types';
+import { AddCategory, Category } from 'src/app/services/types';
+import { VocabularyService } from 'src/app/services/vocabulary/vocabulary.service';
+
 
 @Component({
   selector: 'app-modal-category',

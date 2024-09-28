@@ -19,9 +19,11 @@ import { QuizzComponent } from './quizz/quizz.component';
 import { SidebarForQuizzComponent } from './quizz/sidebar-for-quizz/sidebar-for-quizz.component';
 import { ScoreComponent } from './score/score.component';
 import { ModalLanguageComponent } from './home/modal-language/modal-language.component';
-import { ModalCategoryComponent } from './modal-category/modal-category.component';
+import { ModalCategoryComponent } from './home/modal-category/modal-category.component';
 import { WordsComponent } from './home/words/words.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ScoreMessagePipe } from './pipes/score-message.pipe';
+import { ReverseLanguageDirective } from './directives/reverse-language.directive';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ModalLanguageComponent,
     ModalCategoryComponent,
     WordsComponent,
+    ScoreMessagePipe,
+    ReverseLanguageDirective,
   ],
   imports: [
     BrowserModule,

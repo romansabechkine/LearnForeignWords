@@ -6,12 +6,16 @@
        <form [formGroup]="languageForm" (ngSubmit)="onSubmit()"
        class="flex flex-col justify-center items-center">
             <input formControlName="language1" type="text" required="true" placeholder="Language 1: "
-            class="border-2 p-2 border-red-200 rounded-xl mb-2 mt-4">
+            class="border-2 p-2 border-red-200 rounded-xl">
+            <svg appReverseLanguage class="my-2 rotate-90" height="25" width="25" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"> <path d="m6.5 6.5-4 4 4 4"></path> <path d="m14.5 10.5h-12"></path> <path d="m8.5.5 4 4-4 4"></path> <path d="m12.5 4.5h-12"></path> </g> </g></svg>
             <input formControlName="language2" type="text" required="true" placeholder="Language 2: "
-            class="border-2 p-2 border-red-200 rounded-xl m-2">
-            <button class="flex p-2 bg-red-400 rounded-xl px-3 m-2">
+            class="border-2 p-2 border-red-200 rounded-xl">
+            <button class="p-2 bg-red-400 rounded-xl px-3 m-2">
             Submit</button>
         </form>
+        <p *ngIf="languageForm.invalid && (languageForm.touched || languageForm.dirty)" class="mt-4, text-rose-700 text-lg flex justify-center">
+            {{ getErrorLabel }}
+          </p>
 
     </section>
 </section>

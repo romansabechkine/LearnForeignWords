@@ -28,6 +28,12 @@
       "userId": "efz90",
       "language1": "french",
       "language2": "english"
+    },
+    {
+      "id": "7d98",
+      "userId": "efz90",
+      "language1": "english",
+      "language2": "turkish"
     }
   ],
   "categories": [
@@ -54,6 +60,12 @@
       "userId": "efz90",
       "languagesId": "1",
       "category": "vêtements"
+    },
+    {
+      "id": "081d",
+      "userId": "efz90",
+      "languagesId": "7d98",
+      "category": "clothes"
     }
   ],
   "vocabularies": [
@@ -415,6 +427,54 @@
       "languagesId": "c196",
       "categoryId": "7c3f",
       "words": []
+    },
+    {
+      "id": "_5dla4flm1",
+      "userId": "efz90",
+      "languagesId": "7d98",
+      "categoryId": "081d",
+      "words": [
+        [
+          "Shirts",
+          "Gömlek"
+        ],
+        [
+          "Pants",
+          "Pantolon"
+        ],
+        [
+          "Dress",
+          "Elbise"
+        ],
+        [
+          "Jacket",
+          "Ceket"
+        ],
+        [
+          "Skirt",
+          "Etek"
+        ],
+        [
+          "Shoes",
+          "Ayakkabı"
+        ],
+        [
+          "T-shirt",
+          "Tişört"
+        ],
+        [
+          "Hat",
+          "Şapka"
+        ],
+        [
+          "Scarf",
+          "Atkı"
+        ],
+        [
+          "Gloves",
+          "Eldiven"
+        ]
+      ]
     }
   ]
 }
